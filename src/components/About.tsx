@@ -1,25 +1,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { Code, Palette, Zap } from 'lucide-react';
-
-const features = [
-  {
-    icon: Code,
-    title: 'Clean Code',
-    description: 'Writing maintainable and scalable code following best practices'
-  },
-  {
-    icon: Palette,
-    title: 'Creative Design',
-    description: 'Crafting beautiful and intuitive user experiences'
-  },
-  {
-    icon: Zap,
-    title: 'Performance',
-    description: 'Building fast and optimized web applications'
-  }
-];
+import { aboutData } from '../data/content';
 
 export function About() {
   const ref = useRef(null);
@@ -36,7 +18,7 @@ export function About() {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl mb-4">
-              About <span className="text-[#00ff88] glow-text">Me</span>
+              {aboutData.title} <span className="text-[#00ff88] glow-text">{aboutData.highlight}</span>
             </h2>
             <div className="w-20 h-1 bg-[#00ff88] mx-auto glow-bar"></div>
           </div>
@@ -48,20 +30,11 @@ export function About() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="glass-card p-8 glow-border"
             >
-              <p className="text-lg text-[#ccc] mb-6 leading-relaxed">
-                I'm a passionate developer with a love for creating elegant solutions to complex problems. 
-                With expertise in modern web technologies and blockchain development, I strive to build 
-                applications that make a difference.
-              </p>
-              <p className="text-lg text-[#ccc] mb-6 leading-relaxed">
-                My journey in tech started 5+ years ago, and I've been continuously learning and evolving 
-                with the industry. I believe in writing clean, maintainable code and creating exceptional 
-                user experiences.
-              </p>
-              <p className="text-lg text-[#ccc] leading-relaxed">
-                When I'm not coding, you can find me exploring new technologies, contributing to open source, 
-                or sharing my knowledge through technical writing.
-              </p>
+              {aboutData.description.map((paragraph, index) => (
+                <p key={index} className={`text-lg text-[#ccc] leading-relaxed ${index !== aboutData.description.length - 1 ? 'mb-6' : ''}`}>
+                  {paragraph}
+                </p>
+              ))}
             </motion.div>
 
             <motion.div
@@ -70,7 +43,7 @@ export function About() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="space-y-6"
             >
-              {features.map((feature, index) => (
+              {aboutData.features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}

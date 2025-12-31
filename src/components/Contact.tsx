@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef, useState } from 'react';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import { contactData } from '../data/content';
 
 export function Contact() {
   const ref = useRef(null);
@@ -36,7 +37,7 @@ export function Contact() {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl mb-4">
-              Get In <span className="text-[#00ff88] glow-text">Touch</span>
+              {contactData.title} <span className="text-[#00ff88] glow-text">{contactData.highlight}</span>
             </h2>
             <div className="w-20 h-1 bg-[#00ff88] mx-auto glow-bar"></div>
           </div>
@@ -47,10 +48,9 @@ export function Contact() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <h3 className="text-2xl mb-6">Let's work together</h3>
+              <h3 className="text-2xl mb-6">{contactData.subtitle}</h3>
               <p className="text-[#888] mb-8 leading-relaxed">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. 
-                Feel free to reach out!
+                {contactData.description}
               </p>
 
               <div className="space-y-6">
@@ -60,8 +60,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="mb-1">Email</h4>
-                    <a href="mailto:your.email@example.com" className="text-[#888] hover:text-[#00ff88] transition-colors">
-                      your.email@example.com
+                    <a href={`mailto:${contactData.email}`} className="text-[#888] hover:text-[#00ff88] transition-colors">
+                      {contactData.email}
                     </a>
                   </div>
                 </div>
@@ -72,7 +72,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="mb-1">Location</h4>
-                    <p className="text-[#888]">San Francisco, CA</p>
+                    <p className="text-[#888]">{contactData.location}</p>
                   </div>
                 </div>
               </div>
@@ -99,7 +99,6 @@ export function Contact() {
                     placeholder="John Doe"
                   />
                 </div>
-
                 <div>
                   <label htmlFor="email" className="block mb-2 text-sm text-[#888]">
                     Your Email
@@ -115,7 +114,6 @@ export function Contact() {
                     placeholder="john@example.com"
                   />
                 </div>
-
                 <div>
                   <label htmlFor="message" className="block mb-2 text-sm text-[#888]">
                     Message
@@ -126,18 +124,16 @@ export function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={5}
+                    rows={4}
                     className="w-full px-4 py-3 bg-[#0a0a0a] border border-[#00ff88]/20 rounded focus:border-[#00ff88] focus:outline-none transition-colors text-[#e0e0e0] resize-none"
-                    placeholder="Your message here..."
-                  />
+                    placeholder="Tell me about your project..."
+                  ></textarea>
                 </div>
-
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-[#00ff88] text-[#0a0a0a] rounded hover:bg-[#00cc6a] transition-all duration-300 flex items-center justify-center gap-2 glow-button"
+                  className="w-full py-4 bg-gradient-to-r from-[#00ff88] to-[#00cc6a] text-[#0a0a0a] font-bold rounded hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                 >
-                  <span>Send Message</span>
-                  <Send className="w-4 h-4" />
+                  Send Message
                 </button>
               </form>
             </motion.div>

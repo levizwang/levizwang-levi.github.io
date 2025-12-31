@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { Github, Linkedin, Twitter, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+import { heroData } from '../data/content';
 
 export function Hero() {
   const scrollToAbout = () => {
@@ -36,7 +37,7 @@ export function Hero() {
             transition={{ delay: 0.4 }}
             className="mb-4 text-[#00ff88] tracking-widest text-sm"
           >
-            WELCOME TO MY PORTFOLIO
+            {heroData.welcome}
           </motion.div>
 
           <motion.h1
@@ -45,8 +46,8 @@ export function Hero() {
             transition={{ delay: 0.5 }}
             className="mb-6"
           >
-            <span className="block text-5xl md:text-7xl mb-2">Hi, I'm</span>
-            <span className="text-6xl md:text-8xl text-[#00ff88] glow-text">Your Name</span>
+            <span className="block text-5xl md:text-7xl mb-2">{heroData.greeting}</span>
+            <span className="text-6xl md:text-8xl text-[#00ff88] glow-text">{heroData.name}</span>
           </motion.h1>
 
           <motion.p
@@ -55,7 +56,7 @@ export function Hero() {
             transition={{ delay: 0.7 }}
             className="text-xl md:text-2xl text-[#888] mb-8 max-w-2xl mx-auto"
           >
-            Full Stack Developer | Blockchain Enthusiast | Creative Problem Solver
+            {heroData.title}
           </motion.p>
 
           <motion.div
@@ -64,30 +65,17 @@ export function Hero() {
             transition={{ delay: 0.9 }}
             className="flex gap-4 justify-center mb-12"
           >
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card p-3 hover:bg-[#00ff88]/20 transition-all duration-300 group"
-            >
-              <Github className="w-6 h-6 group-hover:text-[#00ff88] transition-colors" />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card p-3 hover:bg-[#00ff88]/20 transition-all duration-300 group"
-            >
-              <Linkedin className="w-6 h-6 group-hover:text-[#00ff88] transition-colors" />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card p-3 hover:bg-[#00ff88]/20 transition-all duration-300 group"
-            >
-              <Twitter className="w-6 h-6 group-hover:text-[#00ff88] transition-colors" />
-            </a>
+            {heroData.socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-3 hover:bg-[#00ff88]/20 transition-all duration-300 group"
+              >
+                <link.icon className="w-6 h-6 group-hover:text-[#00ff88] transition-colors" />
+              </a>
+            ))}
           </motion.div>
 
           <motion.div
