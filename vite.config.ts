@@ -4,7 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
-  base: '/Personalblog/', // 如果你的仓库名称不是 Personalblog，请修改这里。如果是部署到 username.github.io，请改为 '/'
+  base: '/levizwang-levi.github.io/', // Update this to match your GitHub repository name
   plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
