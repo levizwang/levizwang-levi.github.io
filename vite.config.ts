@@ -4,7 +4,8 @@
   import path from 'path';
 
   export default defineConfig({
-    plugins: [react()],
+  base: '/Personalblog/', // 如果你的仓库名称不是 Personalblog，请修改这里。如果是部署到 username.github.io，请改为 '/'
+  plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
