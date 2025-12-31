@@ -27,7 +27,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-screen flex items-center py-20">
+    <section id="contact" className="min-h-screen flex items-center justify-center py-20">
       <div className="max-w-6xl mx-auto px-6 w-full">
         <motion.div
           ref={ref}
