@@ -7,7 +7,7 @@ export const siteConfig = {
   description: "Code is cheap, show me the prompt!",
   bio: "前PwC IT审计师 → 前Bytedance AI评估专家 → 现互联网金融AI码农\n兼职Web3分析师 & 资深爆仓人 & 合约审计师",
   startDate: "2026-01-01",
-  avatar: "https://images.unsplash.com/photo-1753088583994-6dce9f830f51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvdXRkb29yJTIwbmF0dXJlJTIwc2VsZmllfGVufDF8fHx8MTc2NzE3MDg4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+  avatar: "/IMG_4812.JPG",
   
   social: [
     {
