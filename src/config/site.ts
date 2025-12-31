@@ -1,5 +1,5 @@
 
-import { Github, Twitter, Mail, Rss, MessageCircle } from 'lucide-react';
+import { Github, Twitter, Mail, Rss } from 'lucide-react';
 
 export const siteConfig = {
   name: "Levi",

@@ -9,6 +9,7 @@ import { About } from './components/pages/About';
 import { Projects } from './components/pages/Projects';
 import { Post } from './components/pages/Post';
 import { Article2025 } from './components/pages/Article2025';
+import { BlogPost } from './components/pages/BlogPost';
 
 function Home() {
   return (
@@ -23,7 +24,7 @@ function Home() {
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white dark:bg-neutral-950 antialiased">
+      <div className="min-h-screen bg-background text-foreground antialiased">
         <GridBackground />
         {/* Spacer for fixed header */}
         <div className="relative w-full h-20 opacity-0 pointer-events-none"></div>
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/posts" element={<Post />} />
           <Route path="/2025" element={<Article2025 />} />
+          <Route path="/post/:id" element={<BlogPost />} />
         </Routes>
         <Footer />
       </div>

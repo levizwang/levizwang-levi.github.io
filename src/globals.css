@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --font-size: 16px;
-    --background: 0 0% 100%;
+    --background: 0 0% 91.8%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -33,7 +33,7 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 195 8% 9.8%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;

@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { siteConfig } from '../config/site';
@@ -6,6 +6,10 @@ import { siteConfig } from '../config/site';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return document.documentElement.classList.contains('dark');
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +19,16 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDark);
+    document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+    try {
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    } catch (err) {
+      void err;
+    }
+  }, [isDark]);
 
   return (
     <header
@@ -45,14 +59,7 @@ export function Header() {
           />
         )}
 
-        <nav className="relative z-30 flex flex-row-reverse justify-start w-full text-sm sm:justify-end text-neutral-500 dark:text-neutral-400 sm:flex-row">
-          <div
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="flex flex-col items-end justify-center w-6 h-6 ml-4 cursor-pointer sm:hidden"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-8 h-8" />}
-          </div>
-
+        <nav className="relative z-30 flex items-center justify-end w-full text-sm text-neutral-500 dark:text-neutral-400">
           <div
             id="menu"
             className={`${
@@ -86,6 +93,26 @@ export function Header() {
                 </Link>
               )
             ))}
+          </div>
+
+          <button
+            type="button"
+            aria-label={isDark ? '切换到浅色模式' : '切换到深色模式'}
+            onClick={() => setIsDark((prev) => !prev)}
+            className={`relative z-30 ml-2 inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors ${
+              isScrolled
+                ? 'border border-neutral-200/60 bg-white/60 backdrop-blur-2xl hover:bg-neutral-100/80 dark:border-neutral-700/50 dark:bg-neutral-900/40 dark:hover:bg-neutral-800/60'
+                : 'hover:bg-neutral-100/60 dark:hover:bg-neutral-900/60'
+            }`}
+          >
+            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </button>
+
+          <div
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="flex flex-col items-end justify-center w-6 h-6 ml-4 cursor-pointer sm:hidden"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-8 h-8" />}
           </div>
         </nav>
       </div>
