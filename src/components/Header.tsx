@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { siteConfig } from '../config/site';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +34,7 @@ export function Header() {
           to="/"
           className="relative z-30 flex items-center space-x-2 text-black dark:text-white"
         >
-          <span className="text-nowrap">Hi, DIYgod</span>
+          <span className="text-nowrap">{siteConfig.title}</span>
         </Link>
 
         {isMenuOpen && (
@@ -64,36 +65,27 @@ export function Header() {
               <div className="relative w-full h-full bg-white border border-dashed border-neutral-300 dark:border-neutral-700 backdrop-blur-sm rounded-xl dark:bg-neutral-950"></div>
             </div>
 
-            <Link
-              to="/"
-              className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white"
-            >
-              首页
-            </Link>
-            <Link
-              to="/posts"
-              className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white"
-            >
-              文章
-            </Link>
-            <Link
-              to="/projects"
-              className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white"
-            >
-              项目
-            </Link>
-            <a
-              href="#friends"
-              className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white"
-            >
-              友邻
-            </a>
-            <Link
-              to="/about"
-              className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white"
-            >
-              关于
-            </Link>
+            {siteConfig.nav.map((item) => (
+              item.path.startsWith('http') ? (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white"
+                >
+                  {item.name}
+                </Link>
+              )
+            ))}
           </div>
         </nav>
       </div>
