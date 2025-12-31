@@ -10,7 +10,7 @@ export function BlogPost() {
 
   if (!post) {
     return (
-      <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900 min-h-[50vh] flex flex-col items-center justify-center">
+      <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-background md:rounded-t-md text-neutral-900 min-h-[50vh] flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold mb-4 dark:text-neutral-100">文章未找到</h1>
         <Link to="/posts" className="text-blue-500 hover:underline">返回文章列表</Link>
       </div>
@@ -18,7 +18,7 @@ export function BlogPost() {
   }
 
   return (
-    <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900">
+    <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-background md:rounded-t-md text-neutral-900">
       <div className="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800">
         
         <header className="max-w-2xl mx-auto w-full mb-8">

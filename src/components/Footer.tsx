@@ -7,7 +7,7 @@ export function Footer() {
   const daysSinceStart = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
 
   return (
-    <footer className="text-gray-700 bg-white border-t sm:mt-20 dark:bg-neutral-950 border-neutral-200 dark:border-neutral-800">
+    <footer className="text-gray-700 bg-white border-t sm:mt-20 dark:bg-background border-neutral-200 dark:border-neutral-800">
       <div className="container flex flex-col items-center py-8 mx-auto px-7 max-w-7xl sm:flex-row justify-center">
         <a
           href="/"

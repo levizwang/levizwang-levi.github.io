@@ -3,7 +3,7 @@ import { siteConfig } from '../../config/site';
 
 export function About() {
   return (
-    <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900">
+    <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-background md:rounded-t-md text-neutral-900 dark:text-neutral-100">
       <div className="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800">
         <h1 className="w-full max-w-2xl mx-auto text-3xl font-bold text-left md:mb-8 md:text-4xl dark:text-neutral-100 lg:text-5xl">关于</h1>
         
@@ -18,7 +18,7 @@ export function About() {
             <h2 id="footprints">足迹</h2>
             <p>不是一个旅游爱好者，但经常世界各地搬家</p>
             <div className="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg my-4">
-              <p className="text-sm text-neutral-500">（地图组件在此处展示：{siteConfig.about.footprints.join(' → ')}）</p>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400">（地图组件在此处展示：{siteConfig.about.footprints.join(' → ')}）</p>
             </div>
 
             <h2 id="contact">抓到我</h2>

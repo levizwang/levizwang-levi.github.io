@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Article2025() {
   return (
-    <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900">
+    <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-background md:rounded-t-md text-neutral-900">
       <div className="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800">
         <h1 className="w-full max-w-2xl mx-auto text-3xl font-bold text-left md:mb-8 md:text-4xl dark:text-neutral-100 lg:text-5xl">2025 重新定义的生活</h1>
         <div className="w-full max-w-2xl mx-auto mb-6 font-semibold text-neutral-500 dark:text-neutral-300">
