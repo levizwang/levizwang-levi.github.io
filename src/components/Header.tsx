@@ -33,8 +33,8 @@ export function Header() {
   return (
     <header
       id="header"
-      className={`absolute top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? 'fixed h-14' : 'h-20'
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? 'h-14' : 'h-20'
       }`}
     >
       <div
