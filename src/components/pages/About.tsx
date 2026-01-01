@@ -3,7 +3,7 @@ import { siteConfig } from '../../config/site';
 
 export function About() {
   return (
-    <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-background md:rounded-t-md text-neutral-900 dark:text-neutral-100">
+    <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-transparent dark:bg-background md:rounded-t-md text-neutral-900 dark:text-neutral-100">
       <div className="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800">
         <h1 className="w-full max-w-2xl mx-auto text-3xl font-bold text-left md:mb-8 md:text-4xl dark:text-neutral-100 lg:text-5xl">关于</h1>
         
