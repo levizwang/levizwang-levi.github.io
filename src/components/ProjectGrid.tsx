@@ -1,6 +1,7 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SectionDivider } from './SectionDivider';
 import { projects } from '../data/projects';
+import { Link } from 'react-router-dom';
 
 export function ProjectGrid() {
   return (
@@ -8,10 +9,6 @@ export function ProjectGrid() {
       <SectionDivider label="My Projects" />
       
       <section id="projects" className="max-w-4xl mx-auto px-7 lg:px-0">
-        <h2 className="leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">
-          Projects
-        </h2>
-
         <div className="grid items-stretch w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-7">
           {projects.map((project) => (
             <a
@@ -73,12 +70,12 @@ export function ProjectGrid() {
         </div>
 
         <div className="flex items-center justify-center w-full py-5">
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900"
           >
             View All Projects
-          </a>
+          </Link>
         </div>
       </section>
     </>

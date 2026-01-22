@@ -60,10 +60,6 @@ export function BlogList() {
       <SectionDivider label="My Articles" />
       
       <section id="articles" className="max-w-4xl mx-auto px-7 lg:px-0">
-        <h2 className="leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">
-          Articles
-        </h2>
-        
         <p className="mb-2 mt-2 text-neutral-600 dark:text-neutral-400">
           Categories:{' '}
           {categories.map(([category, count], index) => (
