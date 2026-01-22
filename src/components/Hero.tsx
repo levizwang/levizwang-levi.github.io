@@ -33,12 +33,16 @@ export function Hero() {
         </div>
 
         <div className="relative justify-end w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0">
-          <div className="relative z-30 max-w-80">
-            <ImageWithFallback
-              src={siteConfig.avatar}
-              alt={siteConfig.name}
-              className="relative z-30 w-full md:max-w-md mx-auto rounded-3xl h-full object-cover aspect-square"
-            />
+          <div className="relative z-30 max-w-80 group cursor-pointer">
+            <span className="absolute inset-0 z-20 w-full h-full duration-300 ease-out bg-transparent border border-dashed rounded-3xl border-neutral-300 dark:border-neutral-600 group-hover:-translate-x-1 group-hover:-translate-y-1"></span>
+            <span className="absolute inset-0 z-10 w-full h-full duration-300 ease-out border border-dashed rounded-3xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"></span>
+            <div className="relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
+              <ImageWithFallback
+                src={siteConfig.avatar}
+                alt={siteConfig.name}
+                className="w-full md:max-w-md mx-auto rounded-3xl h-full object-cover aspect-square"
+              />
+            </div>
           </div>
         </div>
       </div>

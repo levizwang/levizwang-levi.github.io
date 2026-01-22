@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { BlogList } from './components/BlogList';
@@ -7,7 +7,6 @@ import { Footer } from './components/Footer';
 import { GridBackground } from './components/GridBackground';
 import { Projects } from './components/pages/Projects';
 import { Post } from './components/pages/Post';
-import { Article2025 } from './components/pages/Article2025';
 import { BlogPost } from './components/pages/BlogPost';
 
 function Home() {
@@ -32,7 +31,6 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/posts" element={<Post />} />
-          <Route path="/2025" element={<Article2025 />} />
           <Route path="/post/:id" element={<BlogPost />} />
         </Routes>
         <Footer />

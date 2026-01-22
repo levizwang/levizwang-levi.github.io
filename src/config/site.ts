@@ -1,5 +1,6 @@
 
 import { Github, Twitter, Mail, Rss } from 'lucide-react';
+import avatarImage from '../assets/IMG_4812.JPG';
 
 export const siteConfig = {
   name: "Levi",
@@ -7,12 +8,12 @@ export const siteConfig = {
   description: "Code is cheap, show me the prompt!",
   bio: "Ex-PwC IT Auditor → Ex-Bytedance AI Evaluation Expert → Current Fintech AI Engineer\nPart-time Web3 Analyst & Professional Liquidated Trader & Smart Contract Auditor",
   startDate: "2026-01-01",
-  avatar: "/IMG_4812.JPG",
+  avatar: avatarImage,
   
   social: [
     {
       name: "RSS",
-      url: "/feed",
+      url: "feed",
       icon: Rss,
       size: 18
     },

@@ -52,11 +52,7 @@ export function BlogList() {
   };
 
   const handlePostClick = (id: string) => {
-    if (id === '1') {
-      navigate('/2025');
-    } else {
-      navigate(`/post/${id}`);
-    }
+    navigate(`/post/${id}`);
   };
 
   return (
@@ -125,7 +121,7 @@ export function BlogList() {
                       <div className="flex-1">
                         <h3 className="flex items-center mb-3">
                           <Link 
-                            to={post.id === '1' ? '/2025' : `/post/${post.id}`}
+                            to={`/post/${post.id}`}
                             onClick={(e) => e.stopPropagation()} // 防止触发 article 的 onClick
                             className="leading-tight tracking-tight dark:text-neutral-100 hover:underline decoration-dashed underline-offset-4"
                           >

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { blogPosts } from '../../data/posts';
 import { SectionDivider } from '../SectionDivider';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
+import { PageLayout } from '../PageLayout';
 
 export function BlogPost() {
   const { id } = useParams<{ id: string }>();
@@ -10,16 +11,17 @@ export function BlogPost() {
 
   if (!post) {
     return (
-      <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-background md:rounded-t-md text-neutral-900 min-h-[50vh] flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold mb-4 dark:text-neutral-100">文章未找到</h1>
-        <Link to="/posts" className="text-blue-500 hover:underline">返回文章列表</Link>
-      </div>
+      <PageLayout>
+        <div className="min-h-[50vh] flex flex-col items-center justify-center">
+          <h1 className="text-2xl font-bold mb-4 dark:text-neutral-100">Article Not Found</h1>
+          <Link to="/posts" className="text-blue-500 hover:underline">View All Articles</Link>
+        </div>
+      </PageLayout>
     );
   }
 
   return (
-    <div className="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-transparent dark:bg-background md:rounded-t-md text-neutral-900">
-      <div className="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800">
+    <PageLayout>
         
         <header className="max-w-2xl mx-auto w-full mb-8">
           <div className="mb-4 text-sm text-neutral-500 dark:text-neutral-400">
@@ -44,21 +46,24 @@ export function BlogPost() {
         <article className="w-full max-w-2xl mx-auto prose prose-neutral dark:prose-invert lg:prose-lg px-2 lg:px-0 mb-20">
             <p className="lead">{post.excerpt}</p>
             <hr />
-            <div className="p-8 bg-neutral-100 dark:bg-neutral-900 rounded-lg text-center text-neutral-500 dark:text-neutral-400">
-                <p>文章内容加载中...</p>
-                <p className="text-sm mt-2">（这是一个通用文章详情页模板，实际内容需从后端或 Markdown 文件加载）</p>
-            </div>
+            {post.content ? (
+              <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            ) : (
+              <div className="p-8 bg-neutral-100 dark:bg-neutral-900 rounded-lg text-center text-neutral-500 dark:text-neutral-400">
+                  <p>Content loading...</p>
+                  <p className="text-sm mt-2">(This is a generic template, actual content needs to be loaded)</p>
+              </div>
+            )}
         </article>
 
         <SectionDivider label="End" />
         
         <div className="flex justify-center mb-10">
              <Link to="/posts" className="px-6 py-2 border rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors dark:text-neutral-300 border-neutral-200 dark:border-neutral-700">
-                返回文章列表
+                View All Articles
              </Link>
         </div>
 
-      </div>
-    </div>
+    </PageLayout>
   );
 }
