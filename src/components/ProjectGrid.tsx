@@ -1,6 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SectionDivider } from './SectionDivider';
-import { siteConfig } from '../config/site';
+import { projects } from '../data/projects';
 
 export function ProjectGrid() {
   return (
@@ -13,7 +13,7 @@ export function ProjectGrid() {
         </h2>
 
         <div className="grid items-stretch w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-7">
-          {siteConfig.projects.map((project) => (
+          {projects.map((project) => (
             <a
               key={project.id}
               href={project.link || '#'}
