@@ -17,11 +17,11 @@ export function Footer() {
         </a>
         
         <p className="mt-4 text-neutral-700 dark:text-neutral-100 sm:ml-4 sm:pl-4 sm:border-l sm:border-neutral-300 dark:sm:border-neutral-700 sm:mt-0">
-          已运行 {daysSinceStart} 天
+          Running for {daysSinceStart} days
         </p>
         
         <p className="mt-4 text-neutral-700 dark:text-neutral-100 sm:ml-4 sm:pl-4 sm:border-l sm:border-neutral-300 dark:sm:border-neutral-700 sm:mt-0">
-          © {currentYear} {siteConfig.name}，版权所有，禁止转载，转发需注明出处
+          © {currentYear} {siteConfig.name}. All rights reserved.
         </p>
       </div>
     </footer>

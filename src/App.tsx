@@ -5,7 +5,6 @@ import { BlogList } from './components/BlogList';
 import { ProjectGrid } from './components/ProjectGrid';
 import { Footer } from './components/Footer';
 import { GridBackground } from './components/GridBackground';
-import { About } from './components/pages/About';
 import { Projects } from './components/pages/Projects';
 import { Post } from './components/pages/Post';
 import { Article2025 } from './components/pages/Article2025';
@@ -31,7 +30,6 @@ export default function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/posts" element={<Post />} />
           <Route path="/2025" element={<Article2025 />} />

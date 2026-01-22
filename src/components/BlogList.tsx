@@ -61,18 +61,18 @@ export function BlogList() {
 
   return (
     <>
-      <SectionDivider label="我写的文章" />
+      <SectionDivider label="My Articles" />
       
       <section id="articles" className="max-w-4xl mx-auto px-7 lg:px-0">
         <h2 className="leading-10 tracking-tight text-neutral-900 dark:text-neutral-100">
-          文章
+          Articles
         </h2>
         
         <p className="mb-2 mt-2 text-neutral-600 dark:text-neutral-400">
-          分类：{' '}
+          Categories:{' '}
           {categories.map(([category, count], index) => (
             <span key={category}>
-              {index > 0 && '、 '}
+              {index > 0 && ', '}
               <button
                 onClick={(e) => handleCategoryClick(e, category)}
                 className={`hover:underline decoration-dashed underline-offset-4 ${
@@ -86,10 +86,10 @@ export function BlogList() {
         </p>
         
         <p className="mb-6 text-neutral-600 dark:text-neutral-400">
-          标签：{' '}
+          Tags:{' '}
           {tags.map(([tag, count], index) => (
             <span key={tag}>
-              {index > 0 && '、 '}
+              {index > 0 && ', '}
               <button
                 onClick={(e) => handleTagClick(e, tag)}
                 className={`hover:underline decoration-dashed underline-offset-4 ${
@@ -205,7 +205,7 @@ export function BlogList() {
                 ))
               ) : (
                 <div className="text-center py-10 text-neutral-500">
-                  没有找到匹配的文章
+                  No articles found matching your criteria
                 </div>
               )}
             </div>
@@ -217,7 +217,7 @@ export function BlogList() {
             to="/posts"
             className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900"
           >
-            查看所有文章
+            View All Articles
           </Link>
         </div>
       </section>
