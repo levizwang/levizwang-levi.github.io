@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'nonce-csp';" />
     <link rel="icon" type="image/jpeg" href="/src/assets/IMG_4812.JPG" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Blog</title>
-    <script>
+    <script nonce="csp">
       (() => {
         try {
           const storedTheme = localStorage.getItem("theme");
