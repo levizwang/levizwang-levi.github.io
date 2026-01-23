@@ -23,7 +23,7 @@ export function BlogPost() {
   return (
     <PageLayout>
         
-        <header className="max-w-2xl mx-auto w-full mb-8">
+        <header className="max-w-4xl mx-auto w-full mb-8">
           <div className="mb-4 text-sm text-neutral-500 dark:text-neutral-400">
             {post.date} · {post.category}
             {post.tags && ` · #${post.tags.join(' #')}`}
@@ -34,7 +34,7 @@ export function BlogPost() {
         </header>
 
         {post.image && (
-          <div className="max-w-3xl mx-auto w-full mb-10">
+          <div className="max-w-4xl mx-auto w-full mb-10">
              <ImageWithFallback
                 src={post.image}
                 alt={post.title}
@@ -43,7 +43,7 @@ export function BlogPost() {
           </div>
         )}
 
-        <article className="w-full max-w-2xl mx-auto prose prose-neutral dark:prose-invert lg:prose-lg px-2 lg:px-0 mb-20">
+        <article className="w-full max-w-4xl mx-auto prose prose-neutral dark:prose-invert lg:prose-lg px-2 lg:px-0 mb-20">
             <p className="lead">{post.excerpt}</p>
             <hr />
             {post.content ? (
