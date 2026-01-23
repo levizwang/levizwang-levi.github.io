@@ -7,7 +7,7 @@ import path from 'path'
 export default defineConfig({
   base: '/',
   assetsInclude: ['**/*.JPG'],
-  plugins: [react({ fastRefresh: false }), markdown({ mode: ['html'] as Mode[] })],
+  plugins: [react(), markdown({ mode: ['html'] as Mode[] })],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
