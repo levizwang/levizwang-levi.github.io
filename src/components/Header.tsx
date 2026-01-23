@@ -1,6 +1,7 @@
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Typewriter, { TypewriterClass } from 'typewriter-effect';
 import { siteConfig } from '../config/site';
 
 export function Header() {
@@ -10,6 +11,15 @@ export function Header() {
     if (typeof window === 'undefined') return false;
     return document.documentElement.classList.contains('dark');
   });
+
+  const handleTypewriterInit = (typewriter: TypewriterClass) => {
+    typewriter
+      .typeString(siteConfig.title)
+      .pauseFor(1000)
+      .deleteAll()
+      .pauseFor(1000)
+      .start();
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +58,18 @@ export function Header() {
           to="/"
           className="relative z-30 flex items-center space-x-2 text-black dark:text-white"
         >
-          <span className="text-nowrap">{siteConfig.title}</span>
+          <span className="text-nowrap">
+            <Typewriter
+              component="span"
+              onInit={handleTypewriterInit}
+              options={{
+                delay: 70,
+                deleteSpeed: 40,
+                cursor: '',
+                loop: true
+              }}
+            />
+          </span>
         </Link>
 
         {isMenuOpen && (
