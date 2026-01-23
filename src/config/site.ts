@@ -1,5 +1,9 @@
 
-import { Github, Twitter, Mail, Rss } from 'lucide-react';
+import { Mail, Linkedin } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaGithub } from 'react-icons/fa';
+import { SiBinance } from 'react-icons/si';
+import { AiOutlineZhihu } from 'react-icons/ai';
 import avatarImage from '../assets/IMG_4812.JPG';
 
 export const siteConfig = {
@@ -12,21 +16,33 @@ export const siteConfig = {
   
   social: [
     {
-      name: "RSS",
-      url: "feed",
-      icon: Rss,
-      size: 18
-    },
-    {
-      name: "Twitter",
-      url: "https://x.com/DIYgod",
-      icon: Twitter,
+      name: "X",
+      url: "https://x.com/Levi2Crypto",
+      icon: FaXTwitter,
       size: 16
     },
     {
       name: "GitHub",
-      url: "https://github.com/DIYgod",
-      icon: Github,
+      url: "https://github.com/levizwang",
+      icon: FaGithub,
+      size: 20
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/levizwang",
+      icon: Linkedin,
+      size: 20
+    },
+    {
+      name: "Binance",
+      url: "https://app.binance.com/uni-qr/cpro/Levi_eth",
+      icon: SiBinance,
+      size: 20
+    },
+    {
+      name: "Zhihu",
+      url: "https://www.zhihu.com/people/levi.eth",
+      icon: AiOutlineZhihu,
       size: 20
     },
     {
