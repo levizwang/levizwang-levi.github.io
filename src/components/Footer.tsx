@@ -23,6 +23,10 @@ export function Footer() {
         <p className="mt-4 text-neutral-700 dark:text-neutral-100 sm:ml-4 sm:pl-4 sm:border-l sm:border-neutral-300 dark:sm:border-neutral-700 sm:mt-0">
           © {currentYear} {siteConfig.name}. All rights reserved.
         </p>
+
+        <p className="mt-4 text-neutral-700 dark:text-neutral-100 sm:ml-4 sm:pl-4 sm:border-l sm:border-neutral-300 dark:sm:border-neutral-700 sm:mt-0">
+          Inspired by <a href="https://diygod.me">DIYgod</a>
+        </p>
       </div>
     </footer>
   );

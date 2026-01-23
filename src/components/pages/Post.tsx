@@ -5,7 +5,7 @@ import { PageLayout } from '../PageLayout';
 export function Post() {
   return (
     <PageLayout>
-      <BlogList />
+      <BlogList showViewAll={false} />
     </PageLayout>
   );
 }

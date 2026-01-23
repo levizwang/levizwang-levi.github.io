@@ -4,7 +4,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import { SectionDivider } from './SectionDivider';
 import { blogPosts } from '../data/posts';
 
-export function BlogList() {
+export function BlogList({ limit, showViewAll = true }: { limit?: number; showViewAll?: boolean }) {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -37,6 +37,11 @@ export function BlogList() {
       return true;
     });
   }, [selectedCategory, selectedTag]);
+
+  const displayedPosts = useMemo(() => {
+    if (!limit) return filteredPosts;
+    return filteredPosts.slice(0, limit);
+  }, [filteredPosts, limit]);
 
   const handleCategoryClick = (e: React.MouseEvent, category: string) => {
     e.preventDefault();
@@ -97,8 +102,8 @@ export function BlogList() {
         <div className="w-full max-w-4xl mx-auto my-7 xl:px-0">
           <div className="flex flex-col items-start justify-start md:flex-row md:space-x-7">
             <div className="w-full space-y-7">
-              {filteredPosts.length > 0 ? (
-                filteredPosts.map((post) => (
+              {displayedPosts.length > 0 ? (
+                displayedPosts.map((post) => (
                   <article
                     key={post.id}
                     className="relative border border-transparent border-dashed cursor-pointer px-6 py-5 md:p-7 group rounded-2xl"
@@ -204,14 +209,16 @@ export function BlogList() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center w-full py-5">
-          <Link
-            to="/posts"
-            className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900"
-          >
-            View All Articles
-          </Link>
-        </div>
+        {showViewAll && (
+          <div className="flex items-center justify-center w-full py-5">
+            <Link
+              to="/posts"
+              className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900"
+            >
+              View All Articles
+            </Link>
+          </div>
+        )}
       </section>
     </>
   );

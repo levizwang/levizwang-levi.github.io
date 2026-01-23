@@ -13,8 +13,8 @@ function Home() {
   return (
     <>
       <Hero />
-      <BlogList />
-      <ProjectGrid />
+      <BlogList limit={5} showViewAll />
+      <ProjectGrid limit={5} showViewAll />
     </>
   );
 }

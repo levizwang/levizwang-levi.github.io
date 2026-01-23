@@ -5,7 +5,7 @@ import { PageLayout } from '../PageLayout';
 export function Projects() {
   return (
     <PageLayout>
-       <ProjectGrid />
+       <ProjectGrid showViewAll={false} />
     </PageLayout>
   );
 }
