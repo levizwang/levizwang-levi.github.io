@@ -5,7 +5,7 @@ import type { Mode } from 'vite-plugin-markdown'
 import path from 'path'
 
 export default defineConfig({
-  base: '/blog/',
+  base: '/',
   assetsInclude: ['**/*.JPG'],
   plugins: [react(), markdown({ mode: ['html'] as Mode[] })],
   resolve: {
