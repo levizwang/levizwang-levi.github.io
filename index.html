@@ -1,16 +1,28 @@
-
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Personal Blog Interface Design</title>
-      <script type="module" crossorigin src="/levizwang-levi.github.io/assets/index-CKHGYZr8.js"></script>
-      <link rel="stylesheet" crossorigin href="/levizwang-levi.github.io/assets/index-Dzpl2poV.css">
-    </head>
-
-    <body>
-      <div id="root"></div>
-    </body>
-  </html>
-  
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https:;" />
+    <link rel="icon" type="image/jpeg" href="/assets/IMG_4812-Bs7bq71p.JPG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Blog</title>
+    <script>
+      (() => {
+        try {
+          const storedTheme = localStorage.getItem("theme");
+          const prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const isDark = storedTheme ? storedTheme === "dark" : prefersDark;
+          document.documentElement.classList.toggle("dark", isDark);
+          document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+        } catch {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-DAMg9ydK.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BR-ONOJx.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
