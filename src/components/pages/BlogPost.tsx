@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { blogPosts } from '../../data/posts';
 import { SectionDivider } from '../SectionDivider';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { PageLayout } from '../PageLayout';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-go';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-jsx';
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-rust';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-tsx';
+import 'prismjs/components/prism-yaml';
 
 export function BlogPost() {
   const { id } = useParams<{ id: string }>();
   const post = blogPosts.find((p) => p.id === id);
+
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [post]);
 
   if (!post) {
     return (

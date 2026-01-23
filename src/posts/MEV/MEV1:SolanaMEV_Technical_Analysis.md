@@ -130,4 +130,4 @@ Welcome to the Dark Forest of Solana, may your Bundles always be included.
 
 ---
 
-*This article is a technical sharing series for [Your Project Name/Blog Series], stay tuned for more Solana engineering combat dry goods.*
+*This article is a technical sharing series for Levi.eth, stay tuned for more Solana engineering combat dry goods.*

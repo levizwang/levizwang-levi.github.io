@@ -77,4 +77,4 @@ In a Solana investment portfolio, understanding and making good use of Jito's yi
 Having captured the opportunity and knowing how to land it through Jito, what exactly is the **mathematical model of arbitrage**? In the next article, we will hardcore dismantle the **Optimal Path Algorithm in "Cyclic Arbitrage"**.
 
 ---
-*Written by the [Your Project Name] Team, taking you through the underlying wealth codes of the Solana ecosystem.*
+*Written by the Levi.eth, taking you through the underlying wealth codes of the Solana ecosystem.*
