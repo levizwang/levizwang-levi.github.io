@@ -1,8 +1,8 @@
 
 import { Mail, Linkedin } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
-import { FaGithub } from 'react-icons/fa';
-import { SiBinance } from 'react-icons/si';
+import { FaGithub, FaEthereum } from 'react-icons/fa';
+import { SiBinance, SiSolana } from 'react-icons/si';
 import { AiOutlineZhihu } from 'react-icons/ai';
 import avatarImage from '../assets/IMG_4812.JPG';
 
@@ -40,6 +40,18 @@ export const siteConfig = {
       size: 20
     },
     {
+      name: "Ethereum",
+      url: "https://etherscan.io/address/0x0cfd6476c2fc06455548514227129dbea35f9a3e",
+      icon: FaEthereum,
+      size: 20
+    },
+    {
+      name: "Solana",
+      url: "https://explorer.solana.com/address/26QWQzwStTLSfh67KfLxnKQWrenfvKA6L3u2MbSdjzdv",
+      icon: SiSolana,
+      size: 20
+    },
+    {
       name: "Zhihu",
       url: "https://www.zhihu.com/people/levi.eth",
       icon: AiOutlineZhihu,
@@ -47,7 +59,7 @@ export const siteConfig = {
     },
     {
       name: "Email",
-      url: "wang.z.levi@gmail.com",
+      url: "mailto:wang.z.levi@gmail.com",
       icon: Mail,
       size: 20
     }
