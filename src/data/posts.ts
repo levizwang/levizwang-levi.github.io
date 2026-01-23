@@ -1,4 +1,19 @@
-import { html as post1Content } from '../posts/2025-redefining-life.md';
+import { html as post1Content } from '../posts/MEV/MEV1:SolanaMEV_Technical_Analysis.md';
+import { html as post2Content } from '../posts/MEV/MEV2:ControlPlane_Strategy_Scheduling_and_Configuration.md';
+import { html as post3Content } from '../posts/MEV/MEV3:Inventory_Network_Wide_Token_Index.md';
+import { html as post4Content } from '../posts/MEV/MEV4:Scout_Transaction_Monitoring_and_Parsing.md';
+import { html as post5Content } from '../posts/MEV/MEV5:AMM_Pricing_and_Mathematical_Model.md';
+import { html as post6Content } from '../posts/MEV/MEV6:StrategyArb_Cross_DEX_Arbitrage_Strategy.md';
+import { html as post7Content } from '../posts/MEV/MEV7:Jito.md';
+import { html as post8Content } from '../posts/MEV/MEV8:Risk_Risk_Control_and_Safety_Checks.md';
+import mev1Image from '../posts/MEV_img/MEV1.jpg';
+import mev2Image from '../posts/MEV_img/MEV2.jpg';
+import mev3Image from '../posts/MEV_img/MEV3.jpg';
+import mev4Image from '../posts/MEV_img/MEV4.jpg';
+import mev5Image from '../posts/MEV_img/MEV5.JPG';
+import mev6Image from '../posts/MEV_img/MEV6.JPG';
+import mev7Image from '../posts/MEV_img/MEV7.JPG';
+import mev8Image from '../posts/MEV_img/MEV8.JPG';
 
 export interface BlogPost {
   id: string;
@@ -14,59 +29,82 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
-    title: '2025: Redefining Life',
-    excerpt: 'AI productivity revolution and confusion, welcoming new life, striving for money, untimely open source thinking, cyber life',
+    title: 'MEV1: Solana MEV Technical Analysis',
+    excerpt: 'Technical analysis of Solana MEV, including MEV bots, MEV opportunities, and MEV risks',
     content: post1Content,
-    date: 'Dec 25, 2025',
-    category: 'Diaries',
-    tags: ['Year-end Summary'],
-    image: 'https://images.unsplash.com/photo-1624194243441-c9d1176e99fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwY2F0fGVufDF8fHx8MTc2NzE3MDg4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    date: 'Jan 20, 2026',
+    category: 'MEV',
+    tags: ['MEV', 'Solana'],
+    image: mev1Image,
   },
   {
     id: '2',
-    title: 'European Travel VLOG | Barcelona Rome Vatican Venice Milan Zurich Interlaken Paris',
-    excerpt: 'Dec 2022...',
-    date: 'Dec 20, 2025',
-    category: 'Creations',
-    tags: ['vlog'],
-    image: 'https://images.unsplash.com/photo-1677690489325-e6a4d2594d76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxldXJvcGVhbiUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjcxMTEyNTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'MEV2: Solana MEV Practical Applications',
+    excerpt: 'Practical applications of Solana MEV, including MEV bots, MEV opportunities, and MEV risks',
+    content: post2Content,
+    date: 'Jan 20, 2026',
+    category: 'MEV',
+    tags: ['MEV', 'Solana'],
+    image: mev2Image,
   },
   {
     id: '3',
-    title: 'Ancient Artifact Beancount: The Ultimate Double-Entry Bookkeeping Solution in the Crypto and AI Era',
-    excerpt: 'Often we find bookkeeping troublesome not because the UI isn\'t pretty or the interaction isn\'t smooth, but because the method isn\'t scientific enough. When the method is scientific enough, you don\'t even need a UI. A CLI + a few plain text files + a clear syntax can describe the financial world very accurately.',
-    date: 'Dec 12, 2025',
-    category: 'Sharings',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwxfHx8fDE3NjcxNTQ3NjN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'MEV3: Solana MEV Impact and Challenges',
+    excerpt: 'Impact and challenges of Solana MEV, including MEV bots, MEV opportunities, and MEV risks',
+    content: post3Content,
+    date: 'Jan 20, 2026',
+    category: 'MEV',
+    tags: ['MEV', 'Solana'],
+    image: mev3Image,
   },
   {
     id: '4',
-    title: 'The Collapse and Rebirth of a Six-Year-Old Open Source Project',
-    excerpt: 'I have an open source project I\'ve maintained for six years — RSSHub, and it is facing collapse. On the surface, it has nearly 30k Stars, over 900 Contributors, over 300 million requests per month, countless users, tens of dollars in sponsorship per month, a steady stream of issues and PRs, and code updates almost every day. It looks very healthy and vibrant.',
-    date: 'Mar 10, 2024',
-    category: 'Creations',
-    image: 'https://images.unsplash.com/photo-1717343824623-06293a62a70d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXR5JTIwbWFwfGVufDF8fHx8MTc2NzE3MDg4NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'MEV4: Solana MEV Future Trends',
+    excerpt: 'Future trends of Solana MEV, including MEV bots, MEV opportunities, and MEV risks',
+    content: post4Content,
+    date: 'Jan 20, 2026',
+    category: 'MEV',
+    tags: ['MEV', 'Solana'],
+    image: mev4Image,
   },
   {
     id: '5',
-    title: 'Two Weeks Living with Palu',
-    excerpt: 'Which little boy hasn\'t fantasized about living in a world full of Pokémon partners? They can understand and are willing to listen to us, have different characteristics and powerful skills, and are all very cute. We can sleep and eat with them, fight side by side to explore the world, never be lonely again, and anyone can find the Pokémon that suits them best.',
-    date: 'Feb 18, 2024',
-    category: 'Chats',
-    image: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW5zZXQlMjBwZXJzb258ZW58MXx8fHwxNzY3MTcwODg0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    title: 'MEV5: Solana MEV Regulation and Law',
+    excerpt: 'Regulation and law of Solana MEV, including MEV bots, MEV opportunities, and MEV risks',
+    content: post5Content,
+    date: 'Jan 20, 2026',
+    category: 'MEV',
+    tags: ['MEV', 'Solana'],
+    image: mev5Image,
   },
   {
     id: '6',
-    title: 'Twitter Launches DDoS Attack on Open Source Projects',
-    excerpt: 'After Twitter was acquired by Musk, starting from August last year, they have carried out a series of overt and covert crackdowns and attacks on open source third-party integrations and third-party clients. This is to prevent users from accessing and using Twitter through unofficial clients, in order to increase the company\'s advertising and membership revenue.',
-    date: 'Jan 28, 2024',
-    category: 'Chats',
+    title: 'MEV6: Solana MEV Industry Impact',
+    excerpt: 'Industry impact of Solana MEV, including MEV bots, MEV opportunities, and MEV risks',
+    content: post6Content,
+    date: 'Jan 20, 2026',
+    category: 'MEV',
+    tags: ['MEV', 'Solana'],
+    image: mev6Image,
   },
   {
     id: '7',
-    title: 'How to Elegantly Compile a Markdown Document',
-    excerpt: 'Markdown is a widely used lightweight markup language that allows people to write documents in an easy-to-read and easy-to-write plain text format. It is also the main article format used by xLog. This article uses xLog Flavored Markdown as an example to explain how to elegantly parse a Markdown document.',
-    date: 'Jan 18, 2024',
-    category: 'Sharings',
+    title: 'MEV7: Solana MEV Conclusion',
+    excerpt: 'Conclusion of Solana MEV, including MEV bots, MEV opportunities, and MEV risks',
+    content: post7Content,
+    date: 'Jan 20, 2026',
+    category: 'MEV',
+    tags: ['MEV', 'Solana'],
+    image: mev7Image,
   },
+  {
+    id: '8',
+    title: 'MEV8: Solana MEV Conclusion',
+    excerpt: 'Conclusion of Solana MEV, including MEV bots, MEV opportunities, and MEV risks',
+    content: post8Content,
+    date: 'Jan 20, 2026',
+    category: 'MEV',
+    tags: ['MEV', 'Solana'],
+    image: mev8Image,
+  }
 ];
