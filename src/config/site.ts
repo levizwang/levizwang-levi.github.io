@@ -4,7 +4,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { FaGithub, FaEthereum } from 'react-icons/fa';
 import { SiBinance, SiSolana } from 'react-icons/si';
 import { AiOutlineZhihu } from 'react-icons/ai';
-import avatarImage from '../assets/IMG_4812.JPG';
+import avatarImage from '../images/IMG_4812.JPG';
 
 export const siteConfig = {
   name: "Levi",
@@ -69,5 +69,6 @@ export const siteConfig = {
     { name: "Home", path: "/" },
     { name: "Posts", path: "/posts" },
     { name: "Projects", path: "/projects" },
+    { name: "Optics", path: "/optics" },
   ],
 };

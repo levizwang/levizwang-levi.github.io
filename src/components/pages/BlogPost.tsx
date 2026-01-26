@@ -134,7 +134,7 @@ export function BlogPost() {
             <SectionDivider label="End" />
 
             <div className="flex justify-center mb-10">
-              <Link to="/posts" className="px-6 py-2 border rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors dark:text-neutral-300 border-neutral-200 dark:border-neutral-700">
+              <Link to="/posts" className="px-6 py-2 border rounded-full transition-all bg-transparent border-gray-300 dark:border-[#333333] text-gray-600 dark:text-gray-400 dark:hover:text-[#CCFF00] dark:hover:border-[#CCFF00] dark:active:text-[#CCFF00] dark:active:border-[#CCFF00] dark:active:bg-transparent">
                 View All Articles
               </Link>
             </div>

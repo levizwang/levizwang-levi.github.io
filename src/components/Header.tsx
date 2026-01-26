@@ -100,7 +100,7 @@ export function Header() {
                   href={item.path}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white"
+                  className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-[#CCFF00]"
                 >
                   {item.name}
                 </a>
@@ -108,7 +108,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white"
+                  className="relative flex items-center justify-center w-full px-3 py-2 tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-[#CCFF00]"
                 >
                   {item.name}
                 </Link>

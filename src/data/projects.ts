@@ -1,4 +1,4 @@
-import mev1Image from '../projects/SOLANA_MEV.jpg';
+import mev1Image from '../images/projects/SOLANA_MEV.jpg';
 
 export interface Project {
   id: string;

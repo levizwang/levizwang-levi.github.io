@@ -8,13 +8,14 @@ import { GridBackground } from './components/GridBackground';
 import { Projects } from './components/pages/Projects';
 import { Post } from './components/pages/Post';
 import { BlogPost } from './components/pages/BlogPost';
+import { Optics } from './components/pages/Optics';
 
 function Home() {
   return (
     <>
       <Hero />
-      <BlogList limit={5} showViewAll />
-      <ProjectGrid limit={5} showViewAll />
+      <BlogList limit={3} showViewAll />
+      <ProjectGrid limit={3} showViewAll />
     </>
   );
 }
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/posts" element={<Post />} />
           <Route path="/post/:id" element={<BlogPost />} />
+          <Route path="/optics" element={<Optics />} />
         </Routes>
         <Footer />
       </div>

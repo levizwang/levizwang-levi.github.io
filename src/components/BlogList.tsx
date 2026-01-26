@@ -62,7 +62,7 @@ export function BlogList({ limit, showViewAll = true }: { limit?: number; showVi
 
   return (
     <>
-      <SectionDivider label="My Articles" />
+      {showViewAll && <SectionDivider label="My Articles" />}
       
       <section id="articles" className="max-w-4xl mx-auto px-7 lg:px-0">
         <p className="mb-2 mt-2 text-neutral-600 dark:text-neutral-400">
@@ -115,7 +115,7 @@ export function BlogList({ limit, showViewAll = true }: { limit?: number; showVi
                       }
                     }}
                   >
-                    <span className="absolute inset-0 z-20 w-full h-full duration-300 ease-out bg-white border border-dashed dark:bg-neutral-900 rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:-translate-x-1 group-hover:-translate-y-1"></span>
+                    <span className="absolute inset-0 z-20 w-full h-full duration-300 ease-out bg-white border border-dashed dark:bg-transparent dark:group-hover:bg-neutral-800 rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:-translate-x-1 group-hover:-translate-y-1"></span>
                     <span className="absolute inset-0 z-10 w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"></span>
                     
                     <div className="flex relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
@@ -213,7 +213,7 @@ export function BlogList({ limit, showViewAll = true }: { limit?: number; showVi
           <div className="flex items-center justify-center w-full py-5">
             <Link
               to="/posts"
-              className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900"
+              className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-transparent border-gray-300 dark:border-[#333333] text-gray-600 dark:text-gray-400 dark:hover:text-[#CCFF00] dark:hover:border-[#CCFF00] dark:active:text-[#CCFF00] dark:active:border-[#CCFF00] dark:active:bg-transparent"
             >
               View All Articles
             </Link>

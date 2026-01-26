@@ -6,14 +6,14 @@ import { html as post5Content } from '../posts/MEV/MEV5:AMM_Pricing_and_Mathemat
 import { html as post6Content } from '../posts/MEV/MEV6:StrategyArb_Cross_DEX_Arbitrage_Strategy.md';
 import { html as post7Content } from '../posts/MEV/MEV7:Jito.md';
 import { html as post8Content } from '../posts/MEV/MEV8:Risk_Risk_Control_and_Safety_Checks.md';
-import mev1Image from '../posts/MEV_img/MEV1.jpg';
-import mev2Image from '../posts/MEV_img/MEV2.jpg';
-import mev3Image from '../posts/MEV_img/MEV3.jpg';
-import mev4Image from '../posts/MEV_img/MEV4.jpg';
-import mev5Image from '../posts/MEV_img/MEV5.JPG';
-import mev6Image from '../posts/MEV_img/MEV6.JPG';
-import mev7Image from '../posts/MEV_img/MEV7.JPG';
-import mev8Image from '../posts/MEV_img/MEV8.JPG';
+import mev1Image from '../images/posts/MEV_img/MEV1.jpg';
+import mev2Image from '../images/posts/MEV_img/MEV2.jpg';
+import mev3Image from '../images/posts/MEV_img/MEV3.jpg';
+import mev4Image from '../images/posts/MEV_img/MEV4.jpg';
+import mev5Image from '../images/posts/MEV_img/MEV5.JPG';
+import mev6Image from '../images/posts/MEV_img/MEV6.JPG';
+import mev7Image from '../images/posts/MEV_img/MEV7.JPG';
+import mev8Image from '../images/posts/MEV_img/MEV8.JPG';
 
 export interface BlogPost {
   id: string;
