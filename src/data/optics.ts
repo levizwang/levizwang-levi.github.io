@@ -1,5 +1,9 @@
 import { Photo } from '@/types/optics';
+import exifDataRaw from './optics-exif.json';
 
+const exifData = exifDataRaw as Record<string, any>;
+
+// Re-export imports
 import yuanbaoInBed from '@/images/optics/Yuanbao_In_Bed.jpg';
 import fountain from '@/images/optics/Fountain.jpg';
 import olympicTower from '@/images/optics/Olympic_Tower.jpg';
@@ -27,12 +31,8 @@ export const photos: Photo[] = [
   {
     id: '1',
     url: yuanbaoInBed,
+    ...exifData['Yuanbao_In_Bed.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Standard',
-    iso: 'Auto',
-    aperture: 'f/2.8',
-    shutter: '1/60s',
     location: 'Home',
     title: 'Yuanbao In Bed',
     story: 'A cozy moment captured at home.'
@@ -40,12 +40,8 @@ export const photos: Photo[] = [
   {
     id: '2',
     url: fountain,
+    ...exifData['Fountain.jpg'],
     category: 'Urban',
-    camera: 'Digital',
-    lens: 'Wide',
-    iso: '100',
-    aperture: 'f/8',
-    shutter: '1/200s',
     location: 'City Park',
     title: 'Fountain',
     story: 'Water dancing in the city light.'
@@ -53,12 +49,8 @@ export const photos: Photo[] = [
   {
     id: '3',
     url: olympicTower,
+    ...exifData['Olympic_Tower.jpg'],
     category: 'Urban',
-    camera: 'Digital',
-    lens: 'Telephoto',
-    iso: '200',
-    aperture: 'f/5.6',
-    shutter: '1/500s',
     location: 'Olympic Park',
     title: 'Olympic Tower',
     story: 'A towering structure against the sky.'
@@ -66,12 +58,8 @@ export const photos: Photo[] = [
   {
     id: '4',
     url: olympicForestSunflower1,
+    ...exifData['Olympic_Forest_Sunflower_1.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Macro',
-    iso: '100',
-    aperture: 'f/4',
-    shutter: '1/400s',
     location: 'Olympic Forest Park',
     title: 'Sunflower Bloom',
     story: 'Bright yellow petals facing the sun.'
@@ -79,12 +67,8 @@ export const photos: Photo[] = [
   {
     id: '5',
     url: olympicForestSunflower2,
+    ...exifData['Olympic_Forest_Sunflower_2.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Macro',
-    iso: '100',
-    aperture: 'f/4',
-    shutter: '1/400s',
     location: 'Olympic Forest Park',
     title: 'Sunflower Field',
     story: 'A field of golden sunflowers.'
@@ -92,12 +76,8 @@ export const photos: Photo[] = [
   {
     id: '6',
     url: olympicForestWhiteFlower1,
+    ...exifData['Olympic_Forest_White_Flower_1.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Macro',
-    iso: '200',
-    aperture: 'f/2.8',
-    shutter: '1/1000s',
     location: 'Olympic Forest Park',
     title: 'White Blossom',
     story: 'Delicate white flowers in bloom.'
@@ -105,12 +85,8 @@ export const photos: Photo[] = [
   {
     id: '7',
     url: olympicForestAutumnLeaves,
+    ...exifData['Olympic_Forest_Autumn_Leaves.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Standard',
-    iso: '400',
-    aperture: 'f/4',
-    shutter: '1/250s',
     location: 'Olympic Forest Park',
     title: 'Autumn Leaves',
     story: 'The colors of fall.'
@@ -118,12 +94,8 @@ export const photos: Photo[] = [
   {
     id: '8',
     url: olympicForestAutumnLeaves2,
+    ...exifData['Olympic_Forest_Autumn_Leaves_2.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Standard',
-    iso: '400',
-    aperture: 'f/4',
-    shutter: '1/250s',
     location: 'Olympic Forest Park',
     title: 'Golden Canopy',
     story: 'Sunlight filtering through autumn leaves.'
@@ -131,12 +103,8 @@ export const photos: Photo[] = [
   {
     id: '9',
     url: olympicForestPinkGrass1,
+    ...exifData['Olympic_Forest_Pink_Grass_1.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Standard',
-    iso: '200',
-    aperture: 'f/2.8',
-    shutter: '1/500s',
     location: 'Olympic Forest Park',
     title: 'Pink Muhly Grass',
     story: 'Soft pink waves in the breeze.'
@@ -144,12 +112,8 @@ export const photos: Photo[] = [
   {
     id: '10',
     url: olympicForestGinkgo,
+    ...exifData['Olympic_Forest_Ginkgo.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Standard',
-    iso: '200',
-    aperture: 'f/5.6',
-    shutter: '1/320s',
     location: 'Olympic Forest Park',
     title: 'Ginkgo Avenue',
     story: 'Golden ginkgo leaves covering the path.'
@@ -157,12 +121,8 @@ export const photos: Photo[] = [
   {
     id: '11',
     url: horohiraBridge,
+    ...exifData['Horohira_Bridge.jpg'],
     category: 'Urban',
-    camera: 'Digital',
-    lens: 'Wide',
-    iso: '100',
-    aperture: 'f/8',
-    shutter: '1/125s',
     location: 'Sapporo',
     title: 'Horohira Bridge',
     story: 'Architecture spanning the water.'
@@ -170,12 +130,8 @@ export const photos: Photo[] = [
   {
     id: '12',
     url: chengjiangLake1,
+    ...exifData['Chengjiang_Lake_1.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Wide',
-    iso: '100',
-    aperture: 'f/11',
-    shutter: '1/60s',
     location: 'Chengjiang',
     title: 'Chengjiang Lake',
     story: 'Serene waters and distant mountains.'
@@ -183,12 +139,8 @@ export const photos: Photo[] = [
   {
     id: '13',
     url: chengjiangLakeside,
+    ...exifData['Chengjiang_Lakeside.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Wide',
-    iso: '100',
-    aperture: 'f/8',
-    shutter: '1/200s',
     location: 'Chengjiang',
     title: 'Lakeside View',
     story: 'Peaceful moments by the lake.'
@@ -196,12 +148,8 @@ export const photos: Photo[] = [
   {
     id: '14',
     url: chengjiangLakeside2,
+    ...exifData['Chengjiang_Lakeside_2.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Standard',
-    iso: '200',
-    aperture: 'f/5.6',
-    shutter: '1/250s',
     location: 'Chengjiang',
     title: 'Water\'s Edge',
     story: 'Where the water meets the land.'
@@ -209,12 +157,8 @@ export const photos: Photo[] = [
   {
     id: '15',
     url: baiwangMountain,
+    ...exifData['Baiwang_Mountain.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Wide',
-    iso: '100',
-    aperture: 'f/8',
-    shutter: '1/125s',
     location: 'Baiwang Mountain',
     title: 'Baiwang Mountain',
     story: 'A view from the top.'
@@ -222,12 +166,8 @@ export const photos: Photo[] = [
   {
     id: '16',
     url: baiwangMountainNight,
+    ...exifData['Baiwang_Mountain_Night.jpg'],
     category: 'Urban',
-    camera: 'Digital',
-    lens: 'Standard',
-    iso: '1600',
-    aperture: 'f/2.8',
-    shutter: '1/30s',
     location: 'Baiwang Mountain',
     title: 'Baiwang Night',
     story: 'City lights seen from the mountain.'
@@ -235,12 +175,8 @@ export const photos: Photo[] = [
   {
     id: '17',
     url: snowPlow,
+    ...exifData['Snow_Plow.jpg'],
     category: 'Street',
-    camera: 'Digital',
-    lens: 'Standard',
-    iso: '400',
-    aperture: 'f/4',
-    shutter: '1/500s',
     location: 'City Streets',
     title: 'Snow Plow',
     story: 'Clearing the way in winter.'
@@ -248,12 +184,8 @@ export const photos: Photo[] = [
   {
     id: '18',
     url: snowAmusementPark,
+    ...exifData['Snow_Amusement_Park.jpg'],
     category: 'Urban',
-    camera: 'Digital',
-    lens: 'Wide',
-    iso: '200',
-    aperture: 'f/5.6',
-    shutter: '1/250s',
     location: 'Amusement Park',
     title: 'Snowy Park',
     story: 'A winter wonderland in the amusement park.'
@@ -261,12 +193,8 @@ export const photos: Photo[] = [
   {
     id: '19',
     url: catInSnow,
+    ...exifData['Cat_In_Snow.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Telephoto',
-    iso: '400',
-    aperture: 'f/2.8',
-    shutter: '1/1000s',
     location: 'Outdoors',
     title: 'Cat in Snow',
     story: 'A cat exploring the snowy landscape.'
@@ -274,12 +202,8 @@ export const photos: Photo[] = [
   {
     id: '20',
     url: longmaMountainHydrangea1,
+    ...exifData['Longma_Mountain_Hydrangea_1.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Macro',
-    iso: '200',
-    aperture: 'f/2.8',
-    shutter: '1/400s',
     location: 'Longma Mountain',
     title: 'Hydrangea',
     story: 'Vibrant hydrangeas in bloom.'
@@ -287,12 +211,8 @@ export const photos: Photo[] = [
   {
     id: '21',
     url: longmaMountainMoss1,
+    ...exifData['Longma_Mountain_Moss_1.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Macro',
-    iso: '400',
-    aperture: 'f/2.8',
-    shutter: '1/100s',
     location: 'Longma Mountain',
     title: 'Mountain Moss',
     story: 'Detailed texture of moss.'
@@ -300,14 +220,10 @@ export const photos: Photo[] = [
   {
     id: '22',
     url: longmaMountainWindmill,
+    ...exifData['Longma_Mountain_Windmill.jpg'],
     category: 'Nature',
-    camera: 'Digital',
-    lens: 'Wide',
-    iso: '100',
-    aperture: 'f/8',
-    shutter: '1/500s',
     location: 'Longma Mountain',
     title: 'Windmill',
     story: 'Windmill turning in the mountain breeze.'
-  }
+  },
 ];
