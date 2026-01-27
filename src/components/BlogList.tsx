@@ -213,7 +213,7 @@ export function BlogList({ limit, showViewAll = true }: { limit?: number; showVi
           <div className="flex items-center justify-center w-full py-5">
             <Link
               to="/posts"
-              className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-transparent border-gray-300 dark:border-[#333333] text-gray-600 dark:text-gray-400 dark:hover:text-[#CCFF00] dark:hover:border-[#CCFF00] dark:active:text-[#CCFF00] dark:active:border-[#CCFF00] dark:active:bg-transparent"
+              className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-transparent border-gray-300 dark:border-[#333333] text-gray-600 dark:text-gray-400 hover:text-[#CCFF00] hover:border-[#CCFF00] active:text-[#CCFF00] active:border-[#CCFF00] active:bg-transparent hover:bg-neutral-900 dark:hover:bg-transparent"
             >
               View All Articles
             </Link>

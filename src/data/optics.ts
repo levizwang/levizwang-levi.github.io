@@ -4,34 +4,34 @@ import exifDataRaw from './optics-exif.json';
 const exifData = exifDataRaw as Record<string, any>;
 
 // Re-export imports
-import yuanbaoInBed from '@/images/optics/Yuanbao_In_Bed.jpg';
-import fountain from '@/images/optics/Fountain.jpg';
-import olympicTower from '@/images/optics/Olympic_Tower.jpg';
-import olympicForestSunflower1 from '@/images/optics/Olympic_Forest_Sunflower_1.jpg';
-import olympicForestSunflower2 from '@/images/optics/Olympic_Forest_Sunflower_2.jpg';
-import olympicForestWhiteFlower1 from '@/images/optics/Olympic_Forest_White_Flower_1.jpg';
-import olympicForestAutumnLeaves from '@/images/optics/Olympic_Forest_Autumn_Leaves.jpg';
-import olympicForestAutumnLeaves2 from '@/images/optics/Olympic_Forest_Autumn_Leaves_2.jpg';
-import olympicForestPinkGrass1 from '@/images/optics/Olympic_Forest_Pink_Grass_1.jpg';
-import olympicForestGinkgo from '@/images/optics/Olympic_Forest_Ginkgo.jpg';
-import horohiraBridge from '@/images/optics/Horohira_Bridge.jpg';
-import chengjiangLake1 from '@/images/optics/Chengjiang_Lake_1.jpg';
-import chengjiangLakeside from '@/images/optics/Chengjiang_Lakeside.jpg';
-import chengjiangLakeside2 from '@/images/optics/Chengjiang_Lakeside_2.jpg';
-import baiwangMountain from '@/images/optics/Baiwang_Mountain.jpg';
-import baiwangMountainNight from '@/images/optics/Baiwang_Mountain_Night.jpg';
-import snowPlow from '@/images/optics/Snow_Plow.jpg';
-import snowAmusementPark from '@/images/optics/Snow_Amusement_Park.jpg';
-import catInSnow from '@/images/optics/Cat_In_Snow.jpg';
-import longmaMountainHydrangea1 from '@/images/optics/Longma_Mountain_Hydrangea_1.jpg';
-import longmaMountainMoss1 from '@/images/optics/Longma_Mountain_Moss_1.jpg';
-import longmaMountainWindmill from '@/images/optics/Longma_Mountain_Windmill.jpg';
+import yuanbaoInBed from '@/images/optics/Yuanbao_In_Bed.webp';
+import fountain from '@/images/optics/Fountain.webp';
+import olympicTower from '@/images/optics/Olympic_Tower.webp';
+import olympicForestSunflower1 from '@/images/optics/Olympic_Forest_Sunflower_1.webp';
+import olympicForestSunflower2 from '@/images/optics/Olympic_Forest_Sunflower_2.webp';
+import olympicForestWhiteFlower1 from '@/images/optics/Olympic_Forest_White_Flower_1.webp';
+import olympicForestAutumnLeaves from '@/images/optics/Olympic_Forest_Autumn_Leaves.webp';
+import olympicForestAutumnLeaves2 from '@/images/optics/Olympic_Forest_Autumn_Leaves_2.webp';
+import olympicForestPinkGrass1 from '@/images/optics/Olympic_Forest_Pink_Grass_1.webp';
+import olympicForestGinkgo from '@/images/optics/Olympic_Forest_Ginkgo.webp';
+import horohiraBridge from '@/images/optics/Horohira_Bridge.webp';
+import chengjiangLake1 from '@/images/optics/Chengjiang_Lake_1.webp';
+import chengjiangLakeside from '@/images/optics/Chengjiang_Lakeside.webp';
+import chengjiangLakeside2 from '@/images/optics/Chengjiang_Lakeside_2.webp';
+import baiwangMountain from '@/images/optics/Baiwang_Mountain.webp';
+import baiwangMountainNight from '@/images/optics/Baiwang_Mountain_Night.webp';
+import snowPlow from '@/images/optics/Snow_Plow.webp';
+import snowAmusementPark from '@/images/optics/Snow_Amusement_Park.webp';
+import catInSnow from '@/images/optics/Cat_In_Snow.webp';
+import longmaMountainHydrangea1 from '@/images/optics/Longma_Mountain_Hydrangea_1.webp';
+import longmaMountainMoss1 from '@/images/optics/Longma_Mountain_Moss_1.webp';
+import longmaMountainWindmill from '@/images/optics/Longma_Mountain_Windmill.webp';
 
 export const photos: Photo[] = [
   {
     id: '1',
     url: yuanbaoInBed,
-    ...exifData['Yuanbao_In_Bed.jpg'],
+    ...exifData['Yuanbao_In_Bed.webp'],
     category: 'Nature',
     location: 'Home',
     title: 'Yuanbao In Bed',
@@ -40,7 +40,7 @@ export const photos: Photo[] = [
   {
     id: '2',
     url: fountain,
-    ...exifData['Fountain.jpg'],
+    ...exifData['Fountain.webp'],
     category: 'Urban',
     location: 'City Park',
     title: 'Fountain',
@@ -49,7 +49,7 @@ export const photos: Photo[] = [
   {
     id: '3',
     url: olympicTower,
-    ...exifData['Olympic_Tower.jpg'],
+    ...exifData['Olympic_Tower.webp'],
     category: 'Urban',
     location: 'Olympic Park',
     title: 'Olympic Tower',
@@ -58,7 +58,7 @@ export const photos: Photo[] = [
   {
     id: '4',
     url: olympicForestSunflower1,
-    ...exifData['Olympic_Forest_Sunflower_1.jpg'],
+    ...exifData['Olympic_Forest_Sunflower_1.webp'],
     category: 'Nature',
     location: 'Olympic Forest Park',
     title: 'Sunflower Bloom',
@@ -67,7 +67,7 @@ export const photos: Photo[] = [
   {
     id: '5',
     url: olympicForestSunflower2,
-    ...exifData['Olympic_Forest_Sunflower_2.jpg'],
+    ...exifData['Olympic_Forest_Sunflower_2.webp'],
     category: 'Nature',
     location: 'Olympic Forest Park',
     title: 'Sunflower Field',
@@ -76,7 +76,7 @@ export const photos: Photo[] = [
   {
     id: '6',
     url: olympicForestWhiteFlower1,
-    ...exifData['Olympic_Forest_White_Flower_1.jpg'],
+    ...exifData['Olympic_Forest_White_Flower_1.webp'],
     category: 'Nature',
     location: 'Olympic Forest Park',
     title: 'White Blossom',
@@ -85,7 +85,7 @@ export const photos: Photo[] = [
   {
     id: '7',
     url: olympicForestAutumnLeaves,
-    ...exifData['Olympic_Forest_Autumn_Leaves.jpg'],
+    ...exifData['Olympic_Forest_Autumn_Leaves.webp'],
     category: 'Nature',
     location: 'Olympic Forest Park',
     title: 'Autumn Leaves',
@@ -94,7 +94,7 @@ export const photos: Photo[] = [
   {
     id: '8',
     url: olympicForestAutumnLeaves2,
-    ...exifData['Olympic_Forest_Autumn_Leaves_2.jpg'],
+    ...exifData['Olympic_Forest_Autumn_Leaves_2.webp'],
     category: 'Nature',
     location: 'Olympic Forest Park',
     title: 'Golden Canopy',
@@ -103,7 +103,7 @@ export const photos: Photo[] = [
   {
     id: '9',
     url: olympicForestPinkGrass1,
-    ...exifData['Olympic_Forest_Pink_Grass_1.jpg'],
+    ...exifData['Olympic_Forest_Pink_Grass_1.webp'],
     category: 'Nature',
     location: 'Olympic Forest Park',
     title: 'Pink Muhly Grass',
@@ -112,7 +112,7 @@ export const photos: Photo[] = [
   {
     id: '10',
     url: olympicForestGinkgo,
-    ...exifData['Olympic_Forest_Ginkgo.jpg'],
+    ...exifData['Olympic_Forest_Ginkgo.webp'],
     category: 'Nature',
     location: 'Olympic Forest Park',
     title: 'Ginkgo Avenue',
@@ -121,7 +121,7 @@ export const photos: Photo[] = [
   {
     id: '11',
     url: horohiraBridge,
-    ...exifData['Horohira_Bridge.jpg'],
+    ...exifData['Horohira_Bridge.webp'],
     category: 'Urban',
     location: 'Sapporo',
     title: 'Horohira Bridge',
@@ -130,7 +130,7 @@ export const photos: Photo[] = [
   {
     id: '12',
     url: chengjiangLake1,
-    ...exifData['Chengjiang_Lake_1.jpg'],
+    ...exifData['Chengjiang_Lake_1.webp'],
     category: 'Nature',
     location: 'Chengjiang',
     title: 'Chengjiang Lake',
@@ -139,7 +139,7 @@ export const photos: Photo[] = [
   {
     id: '13',
     url: chengjiangLakeside,
-    ...exifData['Chengjiang_Lakeside.jpg'],
+    ...exifData['Chengjiang_Lakeside.webp'],
     category: 'Nature',
     location: 'Chengjiang',
     title: 'Lakeside View',
@@ -148,7 +148,7 @@ export const photos: Photo[] = [
   {
     id: '14',
     url: chengjiangLakeside2,
-    ...exifData['Chengjiang_Lakeside_2.jpg'],
+    ...exifData['Chengjiang_Lakeside_2.webp'],
     category: 'Nature',
     location: 'Chengjiang',
     title: 'Water\'s Edge',
@@ -157,7 +157,7 @@ export const photos: Photo[] = [
   {
     id: '15',
     url: baiwangMountain,
-    ...exifData['Baiwang_Mountain.jpg'],
+    ...exifData['Baiwang_Mountain.webp'],
     category: 'Nature',
     location: 'Baiwang Mountain',
     title: 'Baiwang Mountain',
@@ -166,7 +166,7 @@ export const photos: Photo[] = [
   {
     id: '16',
     url: baiwangMountainNight,
-    ...exifData['Baiwang_Mountain_Night.jpg'],
+    ...exifData['Baiwang_Mountain_Night.webp'],
     category: 'Urban',
     location: 'Baiwang Mountain',
     title: 'Baiwang Night',
@@ -175,7 +175,7 @@ export const photos: Photo[] = [
   {
     id: '17',
     url: snowPlow,
-    ...exifData['Snow_Plow.jpg'],
+    ...exifData['Snow_Plow.webp'],
     category: 'Street',
     location: 'City Streets',
     title: 'Snow Plow',
@@ -184,7 +184,7 @@ export const photos: Photo[] = [
   {
     id: '18',
     url: snowAmusementPark,
-    ...exifData['Snow_Amusement_Park.jpg'],
+    ...exifData['Snow_Amusement_Park.webp'],
     category: 'Urban',
     location: 'Amusement Park',
     title: 'Snowy Park',
@@ -193,7 +193,7 @@ export const photos: Photo[] = [
   {
     id: '19',
     url: catInSnow,
-    ...exifData['Cat_In_Snow.jpg'],
+    ...exifData['Cat_In_Snow.webp'],
     category: 'Nature',
     location: 'Outdoors',
     title: 'Cat in Snow',
@@ -202,7 +202,7 @@ export const photos: Photo[] = [
   {
     id: '20',
     url: longmaMountainHydrangea1,
-    ...exifData['Longma_Mountain_Hydrangea_1.jpg'],
+    ...exifData['Longma_Mountain_Hydrangea_1.webp'],
     category: 'Nature',
     location: 'Longma Mountain',
     title: 'Hydrangea',
@@ -211,7 +211,7 @@ export const photos: Photo[] = [
   {
     id: '21',
     url: longmaMountainMoss1,
-    ...exifData['Longma_Mountain_Moss_1.jpg'],
+    ...exifData['Longma_Mountain_Moss_1.webp'],
     category: 'Nature',
     location: 'Longma Mountain',
     title: 'Mountain Moss',
@@ -220,7 +220,7 @@ export const photos: Photo[] = [
   {
     id: '22',
     url: longmaMountainWindmill,
-    ...exifData['Longma_Mountain_Windmill.jpg'],
+    ...exifData['Longma_Mountain_Windmill.webp'],
     category: 'Nature',
     location: 'Longma Mountain',
     title: 'Windmill',

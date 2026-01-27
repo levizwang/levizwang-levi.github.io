@@ -26,8 +26,8 @@ function formatAperture(fNumber) {
 async function generateExifData() {
   console.log('Scanning images in:', IMAGES_DIR);
   
-  // 查找所有 jpg/jpeg/png 文件
-  const files = await glob('*.{jpg,jpeg,png,JPG,JPEG,PNG}', { cwd: IMAGES_DIR });
+  // 查找所有图片文件 (支持 jpg, png, webp)
+  const files = await glob('*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', { cwd: IMAGES_DIR });
   
   const exifData = {};
 

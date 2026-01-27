@@ -90,12 +90,6 @@ export function Lightbox({ photo, onClose }: LightboxProps) {
               {photo.story}
             </p>
           </div>
-
-          {/* Download button */}
-          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-[#CCFF00] text-black rounded-lg font-medium hover:bg-[#B8E600] transition-colors">
-            <Download className="w-4 h-4" />
-            Download Wallpaper
-          </button>
         </div>
       </div>
     </div>
