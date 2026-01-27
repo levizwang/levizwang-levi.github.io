@@ -35,6 +35,7 @@ async function optimizeImages() {
     
     try {
       await sharp(inputPath)
+        .resize(1920, null, { withoutEnlargement: true }) // Resize to max width 1920px
         .webp({ quality: 85, effort: 6 }) // High quality, high compression effort
         .withMetadata() // Keep EXIF
         .toFile(outputPath);

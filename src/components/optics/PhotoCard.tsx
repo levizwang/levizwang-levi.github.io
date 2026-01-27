@@ -23,6 +23,8 @@ export function PhotoCard({ photo, onClick }: PhotoCardProps) {
       <img
         src={photo.url}
         alt={photo.title}
+        loading="lazy"
+        decoding="async"
         className={`w-full h-full object-cover transition-all duration-500 ${
           isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}

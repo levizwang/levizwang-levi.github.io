@@ -75,7 +75,7 @@ export function ProjectGrid({ limit, showViewAll = true }: { limit?: number; sho
           <div className="flex items-center justify-center w-full py-5">
             <Link
               to="/projects"
-              className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-transparent border-gray-300 dark:border-[#333333] text-gray-600 dark:text-gray-400 hover:text-[#CCFF00] hover:border-[#CCFF00] active:text-[#CCFF00] active:border-[#CCFF00] active:bg-transparent hover:bg-neutral-900 dark:hover:bg-transparent"
+              className="inline-flex w-auto px-4 py-2 mt-5 duration-300 ease-out border rounded-full bg-transparent border-gray-300 dark:border-[#333333] text-gray-600 dark:text-gray-400 hover:text-neutral-900 hover:border-neutral-900 dark:hover:text-[#CCFF00] dark:hover:border-[#CCFF00] active:text-[#CCFF00] active:border-[#CCFF00] active:bg-transparent"
             >
               View All Projects
             </Link>
